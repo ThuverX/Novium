@@ -45,6 +45,7 @@ form,
 :root {
   --Settings: "Background settings";
   --Background: url(https://images.pexels.com/photos/1147908/pexels-photo-1147908.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1920&w=1080);
+  --ImageBy: "Photo by David Dibert from Pexels // https://www.pexels.com/photo/scenic-view-of-mountains-1147908/";
 }
 .homeIcon-1FoKUJ:hover,
 .guild-1EfMGQ.selected-ML3OIq .homeIcon-1FoKUJ {
