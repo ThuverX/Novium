@@ -44,8 +44,8 @@ form,
 }
 :root {
   --Settings: "Background settings";
-  --Background: url(https://images.pexels.com/photos/1147908/pexels-photo-1147908.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1920&w=1080);
-  --ImageBy: "Photo by David Dibert from Pexels // https://www.pexels.com/photo/scenic-view-of-mountains-1147908/";
+  --Background: url(https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1920&w=1080);
+  --ImageBy: "Photo by veeterzy from Pexels";
 }
 .homeIcon-1FoKUJ:hover,
 .guild-1EfMGQ.selected-ML3OIq .homeIcon-1FoKUJ {
@@ -190,17 +190,156 @@ form,
   color: white !important;
 }
 .app {
-  background: black;
+  background: transparent;
 }
 .app:before {
+  content: '';
+  position: absolute;
+  left: 50vw;
+  top: 50vh;
+  width: 100vw;
+  height: 100vh;
+  background: var(--Background) 0 0 / cover no-repeat !important;
+  opacity: 0.75;
+  transform: translate(-50%, -50%);
+}
+.app:after {
+  content: '';
+  position: fixed;
+  left: 50vw;
+  top: 50vh;
+  width: 100vw;
+  height: 100vh;
+  background: var(--Background) 0 0 / cover !important;
+  filter: blur(10px);
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+  clip-path: polygon(0% 0%, 0% 100%, 240px 100%, 240px 48px, 100% 48px, 100% 0%);
+}
+.app > * {
+  z-index: 20;
+}
+.membersWrap-2h-GB4 {
+  overflow: hidden;
+}
+.membersWrap-2h-GB4:after {
+  content: '';
+  position: absolute;
+  left: 50vw;
+  top: 50vh;
+  width: 100vw;
+  height: 100vh;
+  background: var(--Background) calc(100% + 240px) -48px / cover !important;
+  filter: blur(10px);
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+.attachButtonDivider-3Glu60 {
+  opacity: 0 !important;
+}
+.content-yTz4x3 .emojiButton-3uL3Aw > div {
+  background: url(https://material.io/tools/icons/static/icons/baseline-face-24px.svg) center / contain no-repeat !important;
+  width: 22px;
+  height: 22px;
+  filter: invert(100%);
+  transition: transform .2s;
+}
+.content-yTz4x3 .emojiButton-3uL3Aw > div:hover {
+  transform: scale(1.2);
+}
+.content-yTz4x3 .emojiButton-3uL3Aw > div div {
+  display: none !important;
+}
+.content-yTz4x3 .attachButtonInner-1iyZ9F {
+  background: url(https://material.io/tools/icons/static/icons/baseline-attach_file-24px.svg) center / contain no-repeat !important;
+  filter: invert(100%);
+  width: 24px;
+  transition: transform .2s;
+}
+.content-yTz4x3 .attachButtonInner-1iyZ9F:hover {
+  transform: scale(1.2);
+}
+.content-yTz4x3 .attachButtonInner-1iyZ9F svg {
+  display: none !important;
+}
+.content-yTz4x3 form {
+  position: relative;
+  width: 100%;
+  height: 44px;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+.content-yTz4x3 form .channelTextArea-1LDbYG {
+  position: relative;
+  width: 100%;
+  height: 44px;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+.content-yTz4x3 form .channelTextArea-1LDbYG > .inner-zqa7da {
+  color: white !important;
+  border-radius: 0 !important;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.content-yTz4x3 form .channelTextArea-1LDbYG > .inner-zqa7da textarea {
+  color: white !important;
+}
+.content-yTz4x3 form .channelTextArea-1LDbYG > .inner-zqa7da:after {
   content: '';
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background: var(--Background) 0 0 / cover no-repeat !important;
-  opacity: 0.75;
+  background: #333333;
+}
+.content-yTz4x3 form .channelTextArea-1LDbYG > .inner-zqa7da * {
+  z-index: 20;
+}
+.preview-2nSL_2 + .marginTop40-i-78cZ .radioGroup-1GBvlr .item-26Dhrx:first-child:not([style*="background-color:"]) {
+  display: none !important;
+}
+.preview-2nSL_2 + .marginTop40-i-78cZ .radioGroup-1GBvlr .item-26Dhrx[style*="background-color:"] + .item-26Dhrx .title-3BE6m5 {
+  visibility: hidden;
+}
+.preview-2nSL_2 + .marginTop40-i-78cZ .radioGroup-1GBvlr .item-26Dhrx[style*="background-color:"] + .item-26Dhrx .title-3BE6m5:after {
+  position: absolute;
+  left: 40px;
+  content: 'TURN THIS ON';
+  color: white !important;
+  visibility: visible;
+  font-size: 2rem;
+}
+.preview-2nSL_2 + .marginTop40-i-78cZ .radioGroup-1GBvlr .item-26Dhrx[style*="background-color:"] + .item-26Dhrx {
+  background: #ff3d0d !important;
+}
+.videoHeight-Qp_9vC + .content-yTz4x3 > .membersWrap-2h-GB4:after {
+  content: '';
+  position: absolute;
+  left: 50vw;
+  top: 50vh;
+  width: 100vw;
+  height: 100vh;
+  background: var(--Background) calc(100% + 240px) -520px / cover !important;
+  filter: blur(10px);
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
 }
 .channels-Ie2l6A *,
 .membersGroup-v9BXpm {
